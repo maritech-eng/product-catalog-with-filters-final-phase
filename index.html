@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Product Catalog</h1>
+        </header>
+
+        <div class="main-content">
+            <!-- Filters Section -->
+            <aside class="filters">
+                <h3>Filters</h3>
+                
+                <!-- Category Filter -->
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <label>
+                        <input type="checkbox" value="electronics" checked> Electronics
+                    </label>
+                    <label>
+                        <input type="checkbox" value="clothing" checked> Clothing
+                    </label>
+                    <label>
+                        <input type="checkbox" value="books" checked> Books
+                    </label>
+                    <label>
+                        <input type="checkbox" value="home" checked> Home & Garden
+                    </label>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="filter-group">
+                    <h4>Price Range</h4>
+                    <label>
+                        <input type="radio" name="price" value="all" checked> All Prices
+                    </label>
+                    <label>
+                        <input type="radio" name="price" value="0-50"> $0 - $50
+                    </label>
+                    <label>
+                        <input type="radio" name="price" value="50-100"> $50 - $100
+                    </label>
+                    <label>
+                        <input type="radio" name="price" value="100-500"> $100 - $500
+                    </label>
+                </div>
+
+                <!-- Rating Filter -->
+                <div class="filter-group">
+                    <h4>Minimum Rating</h4>
+                    <select id="rating-filter">
+                        <option value="0">All Ratings</option>
+                        <option value="4">4 Stars & Up</option>
+                        <option value="3">3 Stars & Up</option>
+                        <option value="2">2 Stars & Up</option>
+                        <option value="1">1 Star & Up</option>
+                    </select>
+                </div>
+
+                <!-- Search -->
+                <div class="filter-group">
+                    <h4>Search</h4>
+                    <input type="text" id="search-input" placeholder="Search products...">
+                </div>
+
+                <button id="reset-filters">Reset Filters</button>
+            </aside>
+
+            <!-- Products Section -->
+            <main class="products">
+                <div class="products-header">
+                    <span id="product-count">12 products</span>
+                    <select id="sort-by">
+                        <option value="name">Sort by Name</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Rating</option>
+                    </select>
+                </div>
+
+                <div class="products-grid" id="products-container">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
